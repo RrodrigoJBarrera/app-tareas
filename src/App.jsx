@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import TaskList from './components/TaskList';
+import TaskList from './components/TaskList.jsx';
 import { v4 as uuidv4 } from 'uuid';
-import TaskForm from './components/TaskForm';
+import TaskForm from './components/TaskForm.jsx';
 import TaskFilter from './components/TaskFilter';
-import TaskNotification from './components/TaskNotification';
+import TaskNotification from './components/TaskNotification.jsx';
 
 const initTasks = [
   {
