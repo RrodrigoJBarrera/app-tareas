@@ -5,7 +5,7 @@ const TaskForm = ({ value, onChange, onSubmit, text }) => {
     <>
       <div>
         <form onSubmit={onSubmit}>
-          <div className="row text-center align-items-center justify-content-center">
+          <div className="container row text-center  align-items-center justify-content-center">
             <div className="col-auto">
               <input
                 className="form-control"

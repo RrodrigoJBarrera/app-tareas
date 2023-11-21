@@ -1,7 +1,7 @@
 import React from 'react';
-import TaskItem from './TaskItem.jsx';
+import TaskItem from '../TaskItem/TaskItem.jsx';
 
-const TaskList = ({ list, toggleCompleteOf, toggleDeleteOf }) => {
+const TaskList = ({ list, toggleCompleteOf, toggleDeleteOf, toggleEditOf }) => {
   return (
     <>
       <ul className="pb-3 ps-0 pe-0">
@@ -13,6 +13,7 @@ const TaskList = ({ list, toggleCompleteOf, toggleDeleteOf }) => {
               task={task}
               toggleComplete={toggleCompleteOf}
               toggleDelete={toggleDeleteOf}
+              toggleEdit={toggleEditOf}
             ></TaskItem>
           ))
           .sort((a, b) => {
