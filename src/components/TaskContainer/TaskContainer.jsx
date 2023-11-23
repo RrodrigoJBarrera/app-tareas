@@ -20,6 +20,13 @@ function TaskContainer() {
 
   const addTask = (event) => {
     event.preventDefault();
+    if (!newTask) {
+      setMessageTaskAdd('El campo no puede estar vacio');
+      setTimeout(() => {
+        setMessageTaskAdd(null);
+      }, 3000);
+      return null;
+    }
     const taskObject = {
       id: uuidv4(),
       name: newTask,
@@ -38,7 +45,7 @@ function TaskContainer() {
     const changeTask = { ...task, complete: !task.complete };
     setTasks(
       tasks
-        .map((task) => (task.id !== itemId ? task : changeTask))
+        .map((task) => (task.id === itemId ? changeTask : task))
         .sort((a, b) => {
           if (a.complete && !b.complete) {
             return -1; // a viene antes que b
